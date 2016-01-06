@@ -4,11 +4,17 @@
 <meta charset="utf-8">
 <title>簡易画像ビューワ</title>
 <link rel="stylesheet" href="viewer.css">
+<script>
+function revBtnClick(){
+  window.alert('こんにちは');
+  window.alert('こんばんは');
+}
+</script>
 </head>
 <body>
 <img src="img/1.jpg">
 <div class="no1">No.1</div>
-<button onclick="window.alert('こんにちは'); window.alert('こんばんは');">←</button>
+<button onclick="revBtnClick();">←</button>
 <button onclick="window.alert('さようなら');">→</button>
 </body>
 </html>
