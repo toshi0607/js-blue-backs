@@ -11,5 +11,7 @@ function fwdBtnClick(){
   pictNo++;
   document.getElementById('no').innerHTML = 'No.' + pictNo;
   document.getElementById('pict').src = 'img/' + pictNo + '.jpg';
-  document.getElementById('no').className = 'no2';
+  if (pictNo === 4) {
+    document.getElementById('no').className = 'no2';
+  }
 }
