@@ -9,6 +9,6 @@ function revBtnClick(){
 function fwdBtnClick(){
   pictNo++;
   document.getElementById('no').innerHTML = 'No.' + pictNo;
-  document.getElementById('pict').src = 'img/2.jpg';
+  document.getElementById('pict').src = 'img/' + pictNo + '.jpg';
   document.getElementById('no').className = 'no2';
 }
