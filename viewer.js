@@ -5,6 +5,10 @@ function revBtnClick(){
   document.getElementById('no').innerHTML = 'No.' + pictNo;
   document.getElementById('pict').src = 'img/' + pictNo + '.jpg';
   document.getElementById('no').className = 'no1';
+
+  if (pictNo === 1) {
+    document.getElementById('fwd_btn').disabled = 'disabled';
+  }
 }
 
 function fwdBtnClick(){
