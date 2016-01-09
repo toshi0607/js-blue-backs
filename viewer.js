@@ -13,5 +13,6 @@ function fwdBtnClick(){
   document.getElementById('pict').src = 'img/' + pictNo + '.jpg';
   if (pictNo === 4) {
     document.getElementById('no').className = 'no2';
+    document.getElementById('fwd_btn').disabled = 'disabled';
   }
 }
