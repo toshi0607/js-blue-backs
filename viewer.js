@@ -1,4 +1,14 @@
 var pictNo = 1;
+var myImg = [];
+
+myImg[0] = document.createElement('img');
+myImg[0].src = 'img/1.jpg';
+myImg[1] = document.createElement('img');
+myImg[1].src = 'img/2.jpg';
+myImg[2] = document.createElement('img');
+myImg[2].src = 'img/3.jpg';
+myImg[3] = document.createElement('img');
+myImg[3].src = 'img/4.jpg';
 
 function revBtnClick(){
   pictNo--;
