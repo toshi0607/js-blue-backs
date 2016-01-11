@@ -6,10 +6,14 @@ for (var i = 0;i < 4; i++){
   myImg[i].src = 'img/' + (i + 1) + '.jpg';
 }
 
-function revBtnClick(){
-  pictNo--;
+function showImg(){
   document.getElementById('no').innerHTML = 'No.' + pictNo;
   document.getElementById('pict').src = myImg[pictNo - 1].src;
+}
+
+function revBtnClick(){
+  pictNo--;
+  showImg();
 
   if (pictNo === 1) {
     document.getElementById('fwd_btn').disabled = 'disabled';
@@ -21,8 +25,8 @@ function revBtnClick(){
 
 function fwdBtnClick(){
   pictNo++;
-  document.getElementById('no').innerHTML = 'No.' + pictNo;
-  document.getElementById('pict').src = myImg[pictNo - 1].src;
+  showImg();
+
   if (pictNo === 4) {
     document.getElementById('no').className = 'no2';
     document.getElementById('fwd_btn').disabled = 'disabled';
