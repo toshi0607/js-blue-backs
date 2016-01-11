@@ -8,6 +8,8 @@ function revBtnClick(){
 
   if (pictNo === 1) {
     document.getElementById('fwd_btn').disabled = 'disabled';
+  } else if (pictNo === 3) {
+    document.getElementById('fwd_btn').disabled = false;
   }
 }
 
@@ -18,5 +20,7 @@ function fwdBtnClick(){
   if (pictNo === 4) {
     document.getElementById('no').className = 'no2';
     document.getElementById('fwd_btn').disabled = 'disabled';
+  } else if (pictNo === 2) {
+    document.getElementById('rev_btn').disabled = false;
   }
 }
