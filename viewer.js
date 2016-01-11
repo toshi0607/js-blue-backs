@@ -18,7 +18,7 @@ function init(){
     myPict.src = myImg[pictNo - 1].src;
   }
 
-  revBtn.onclick = revBtnClick;
+  revBtn.addEventListener('click', revBtnClick, false);
 
   function revBtnClick(){
     pictNo--;
