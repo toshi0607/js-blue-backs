@@ -17,7 +17,7 @@ function revBtnClick(){
 
   if (pictNo === 1) {
     document.getElementById('fwd_btn').disabled = 'disabled';
-  } else if (pictNo === 3) {
+  } else if (pictNo === myImg.length - 1) {
     document.getElementById('fwd_btn').disabled = false;
     document.getElementById('no').className = 'no1';
   }
@@ -27,7 +27,7 @@ function fwdBtnClick(){
   pictNo++;
   showImg();
 
-  if (pictNo === 4) {
+  if (pictNo === myImg.length) {
     document.getElementById('no').className = 'no2';
     document.getElementById('fwd_btn').disabled = 'disabled';
   } else if (pictNo === 2) {
