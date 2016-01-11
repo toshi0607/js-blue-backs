@@ -13,7 +13,7 @@ myImg[3].src = 'img/4.jpg';
 function revBtnClick(){
   pictNo--;
   document.getElementById('no').innerHTML = 'No.' + pictNo;
-  document.getElementById('pict').src = 'img/' + pictNo + '.jpg';
+  document.getElementById('pict').src = myImg[pictNo - 1].src;
 
   if (pictNo === 1) {
     document.getElementById('fwd_btn').disabled = 'disabled';
@@ -26,7 +26,7 @@ function revBtnClick(){
 function fwdBtnClick(){
   pictNo++;
   document.getElementById('no').innerHTML = 'No.' + pictNo;
-  document.getElementById('pict').src = 'img/' + pictNo + '.jpg';
+  document.getElementById('pict').src = myImg[pictNo - 1].src;
   if (pictNo === 4) {
     document.getElementById('no').className = 'no2';
     document.getElementById('fwd_btn').disabled = 'disabled';
