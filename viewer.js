@@ -11,6 +11,8 @@ function showImg(){
   document.getElementById('pict').src = myImg[pictNo - 1].src;
 }
 
+document.getElementById('rev_btn').onclick = revBtnClick;
+
 function revBtnClick(){
   pictNo--;
   showImg();
@@ -22,6 +24,8 @@ function revBtnClick(){
     document.getElementById('no').className = 'no1';
   }
 }
+
+document.getElementById('fwd_btn').onclick = fwdBtnClick;
 
 function fwdBtnClick(){
   pictNo++;
