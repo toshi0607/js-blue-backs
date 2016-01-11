@@ -3,6 +3,10 @@ window.onload = init;
 function init(){
   var pictNo = 1;
   var myImg = [];
+  var myNo = document.getElementById('no');
+  var myPict = document.getElementById('pict');
+  var revBtn = document.getElementById('rev_btn');
+  var fwdBtn = document.getElementById('fwd_btn');
 
   for (var i = 0;i < 4; i++){
     myImg[i] = document.createElement('img');
@@ -10,35 +14,35 @@ function init(){
   }
 
   function showImg(){
-    document.getElementById('no').innerHTML = 'No.' + pictNo;
-    document.getElementById('pict').src = myImg[pictNo - 1].src;
+    myNo.innerHTML = 'No.' + pictNo;
+    myPict.src = myImg[pictNo - 1].src;
   }
 
-  document.getElementById('rev_btn').onclick = revBtnClick;
+  revBtn.onclick = revBtnClick;
 
   function revBtnClick(){
     pictNo--;
     showImg();
 
     if (pictNo === 1) {
-      document.getElementById('fwd_btn').disabled = 'disabled';
+      revBtn.disabled = 'disabled';
     } else if (pictNo === myImg.length - 1) {
-      document.getElementById('fwd_btn').disabled = false;
-      document.getElementById('no').className = 'no1';
+      fwdBtn.disabled = false;
+      myNo.className = 'no1';
     }
   }
 
-  document.getElementById('fwd_btn').onclick = fwdBtnClick;
+  fwdBtn.onclick = fwdBtnClick;
 
   function fwdBtnClick(){
     pictNo++;
     showImg();
 
     if (pictNo === myImg.length) {
-      document.getElementById('no').className = 'no2';
-      document.getElementById('fwd_btn').disabled = 'disabled';
+      myNo.className = 'no2';
+      fwdBtn.disabled = 'disabled';
     } else if (pictNo === 2) {
-      document.getElementById('rev_btn').disabled = false;
+      revBtn.disabled = false;
     }
   }
 }
