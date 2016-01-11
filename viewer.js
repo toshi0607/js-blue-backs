@@ -18,9 +18,7 @@ function init(){
     myPict.src = myImg[pictNo - 1].src;
   }
 
-  revBtn.addEventListener('click', revBtnClick, false);
-
-  function revBtnClick(){
+  revBtn.onclick = function (){
     pictNo--;
     showImg();
 
@@ -30,7 +28,7 @@ function init(){
       fwdBtn.disabled = false;
       myNo.className = 'no1';
     }
-  }
+  };
 
   fwdBtn.onclick = fwdBtnClick;
 
